@@ -1,0 +1,494 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "description": "Atomic Attributes (Primitive Features) for Real-World UXO",
+    "classes_count": 9
+  },
+  "contradictory_attribute_pairs": [
+    [
+      "fits_in_hand",
+      "requires_equipment"
+    ],
+    [
+      "fits_in_hand",
+      "large_diameter"
+    ],
+    [
+      "tail_fins",
+      "copper_band_at_base"
+    ],
+    [
+      "tail_fins",
+      "grooves_on_body"
+    ],
+    [
+      "tail_fins",
+      "spiral_grooves_on_band"
+    ],
+    [
+      "flat_disc_circular",
+      "elongated_cylindrical"
+    ],
+    [
+      "pressure_plate",
+      "tail_fins"
+    ],
+    [
+      "teardrop_shaped_front",
+      "elongated_cylindrical"
+    ],
+    [
+      "teardrop_shaped_front",
+      "uniform_diameter_profile"
+    ],
+    [
+      "teardrop_shaped_front",
+      "rounded_shape_oval"
+    ],
+    [
+      "teardrop_shaped_front",
+      "ogive_conic_short"
+    ],
+    [
+      "teardrop_shaped_front",
+      "ogive_conic_elongated"
+    ],
+    [
+      "teardrop_shaped_front",
+      "ogive_blunt"
+    ],
+    [
+      "copper_band_at_base",
+      "rim_flange_base"
+    ],
+    [
+      "perforated_tubular_stalk",
+      "copper_band_at_base"
+    ],
+    [
+      "rear_termination_open",
+      "rear_termination_flat"
+    ]
+  ],
+  "attribute_definitions": {
+    "base_center_dented": "Circular indentation at the exact center of the base (primer dent). Only score if the base face is visible; even a faint circular indentation at the center counts as partial.",
+    "conical_pointed": "Straight-sided conical shape tapering uniformly to a sharp apex (pointed_nose). If a clear pointed tip is visible with straight edges, score partial.",
+    "copper_band_at_base": "Distinct circumferential driving band near the base of the body (often copper/bronze but can be darker or corroded). This is a THICK ring around the projectile body, NOT the thin cartridge case rim. If you see any faint circumferential band or groove at the base, score partial. If you see a primer dent or a thin case rim, do NOT mark copper_band_at_base; use rim_flange_base/base_center_dented instead.",
+    "cylindrical_parallel_midsection": "Body segment with straight, parallel sides and constant diameter over a noticeable length. Even a short visible straight segment counts as partial.",
+    "cylindrical_simple": "Basic straight cylinder with minimal taper or features; cartridge case-like (aka cylindric simple).",
+    "distal_diameter_step_down": "Clear, abrupt reduction in diameter toward the rear/tail (not just perspective or shadow). A visible collar or step change near the rear counts as partial.",
+    "elongated_cylindrical": "Long tubular body with consistent diameter across most of its length (long_tubular_body). If the object looks clearly longer than it is wide, score partial. If one end is wider than the other, score teardrop_shaped_front or rounded_shape_oval instead.",
+    "fits_in_hand": "Overall scale appears small enough to be fully enclosed by a human hand. Use visible scale cues (hand, glove, tool, grass blades). If it appears clearly hand-sized, score partial even if the hand is not present. If no scale cues, score 0.0.",
+    "flat_disc_circular": "Disc-like object with circular outline and very low height relative to diameter (pancake-like). If it appears very low-profile and wide, score partial.",
+    "rounded_shape_oval": "Overall oval/egg-like shape with rounded ends and no sharp tip (aka egg shaped oval). Roughly symmetric from front to back; distinct from teardrop_shaped_front (which is clearly wider at one end) and from elongated_cylindrical.",
+    "tail_fins": "Flat fins/tabs at the rear end (small triangular blades or protruding planes). Fins may be corroded, bent, or partially missing; even a single fin stub or fin-like protrusion at the extreme rear counts as partial. Do not confuse with small side lugs or handles.",
+    "hemispherical_half": "Dome-like shape forming approximately half of a sphere. If the visible profile is clearly dome-shaped, score partial.",
+    "large_diameter": "Body width is clearly large relative to its length or compared to context (vehicle_scale). Only score if a clear scale reference (person, hand, vehicle, tool) shows it is very large. If no scale reference, score 0.0.",
+    "nozzle_holes_rear": "Small circular exhaust openings at the extreme rear (holes around nozzle). Even a single visible rear hole or port counts as partial.",
+    "ogive_blunt": "Rounded/blunt nose with shallow curvature and no sharp apex. If the nose is rounded without a point, score partial.",
+    "ogive_conic_elongated": "Long ogive nose with smooth continuous curvature; tip is narrow and expands gradually into the body. If curvature is smooth and extended, score partial.",
+    "ogive_conic_short": "Short ogive nose with rapid curvature; widens quickly into the body (short transition). If the nose looks short and rounded but not flat, score partial.",
+    "teardrop_shaped_front": "Overall silhouette is WIDEST at the FRONT and gradually narrows toward the back (pear/teardrop). This is NOT an ogive nose on a cylinder. Do not score this with elongated_cylindrical or ogive_* shapes.",
+    "perforated_tubular_stalk": "Rear tail tube with one or more round holes visible along the tube (tail boom). If a narrow rear tube shows even one clear side aperture, score partial. Not a nozzle cavity.",
+    "pressure_plate": "Large flat or slightly raised plate on the top surface; should look like a distinct plate. If a plate outline is visible, score partial.",
+    "pull_ring": "Small circular ring attached via a short connector, freely movable.",
+    "rear_termination_flat": "Back end is closed and flat, forming a perpendicular circular face. If a flat rear face is visible, score partial. Mutually exclusive with rear_termination_open.",
+    "rear_termination_open": "Back end is hollow/open with visible exhaust/nozzle cavity. A dark circular cavity or hollow opening at the rear counts as partial. Mutually exclusive with rear_termination_flat.",
+    "rectangular_box": "Prismatic shape with flat rectangular faces and sharp edges.",
+    "requires_equipment": "Overall dimensions and proportions suggest handling requires external tools or machinery rather than direct manual manipulation. Only score if explicit context (person, vehicle, equipment) indicates it is too large/heavy for one person. If no scale reference, score 0.0.",
+    "rim_flange_base": "Thin protruding lip at the extreme base edge (cartridge case rim). This can appear as a narrow step/lip even from a slight side view. Do NOT confuse with a thick driving band. If a thin rim line or step at the base is faintly visible, score partial.",
+    "separated_components_joined": "Two or more distinct sections connected together, visible as a joint/seam between body and tail assembly. Any clear seam, collar ring, or material transition between sections counts as partial.",
+    "slender_tubular_body": "Long thin tube with clearly high length-to-diameter ratio. If it appears noticeably thin relative to its length, score partial. If compact or stubby, keep 0.0.",
+    "suspension_lug": "Small side lugs/hooks for hanging or mounting, often a paired set of blocks/loops.",
+    "top_mounted_mechanism": "Distinct mechanical or structural component mounted at the topmost region. If any protruding top assembly is visible, score partial.",
+    "tubular_end_section": "Plain cylindrical rear extension with no fins or nozzle openings (a simple tube tail). If the rear looks like a narrower tube segment or collar, score partial even if the step-down is subtle.",
+    "uniform_diameter_profile": "Width remains constant along the visible length (pipe-like). If the visible portion shows parallel sides with no taper, score partial. Do not score if there is any clear step-down, tail assembly, or distinct rear tube.",
+    "segmented_body_pattern": "Body surface divided into raised geometric segments (aka serrated body pattern, segmented body grid). If any repeating segment pattern is visible, score partial.",
+    "grooves_on_body": "Visible grooves or rifling lines along the body surface (not dirt or shadows). Even short or faint linear grooves aligned with the body axis count as partial.",
+    "spiral_grooves_on_band": "Helical or diagonal grooves on a circumferential band near the base (rifling marks). If only a partial arc of diagonal grooves is visible, score partial.",
+    "lever_released": "Lever/handle appears detached or not secured against the body.",
+    "firing_mechanism_parts": "Visible mechanical safety/trigger parts (pin, lever, spoon) on the top section.",
+    "concentric_rings_pattern": "Circular ring grooves on a flat face, like a target pattern. Even faint concentric rings count as partial."
+  },
+  "classes": {
+    "Projectile": {
+      "type": "Artillery_Ammunition",
+      "description": "Artillery shells, tank rounds (spin-stabilized)",
+      "required_attributes": [
+        [
+          "elongated_cylindrical",
+          "uniform_diameter_profile",
+          "cylindrical_parallel_midsection",
+          "ogive_conic_elongated",
+          "conical_pointed"
+        ],
+        [
+          "copper_band_at_base",
+          "spiral_grooves_on_band",
+          "grooves_on_body"
+        ]
+      ],
+      "forbidden_attributes": [
+        [
+          "segmented_body_pattern",
+          "pull_ring"
+        ],
+        [
+          "tail_fins",
+          "perforated_tubular_stalk",
+          "separated_components_joined"
+        ],
+        [
+          "rim_flange_base",
+          "base_center_dented"
+        ],
+        "rounded_shape_oval"
+      ],
+      "supporting_attributes": [
+        "copper_band_at_base",
+        "spiral_grooves_on_band",
+        "grooves_on_body"
+      ]
+    },
+    "Mortar_Bomb": {
+      "type": "Indirect_Fire_Ammunition",
+      "description": "Fin-stabilized, tail-assembled rounds",
+      "required_attributes": [
+        [
+          "tail_fins",
+          "perforated_tubular_stalk",
+          "tubular_end_section",
+          "separated_components_joined"
+        ],
+        [
+          "slender_tubular_body",
+          "elongated_cylindrical",
+          "cylindrical_parallel_midsection",
+          "distal_diameter_step_down"
+        ]
+      ],
+      "forbidden_attributes": [
+        [
+          "copper_band_at_base",
+          "grooves_on_body",
+          "spiral_grooves_on_band"
+        ],
+        [
+          "rim_flange_base",
+          "base_center_dented"
+        ],
+        [
+          "pull_ring",
+          "pressure_plate",
+          "suspension_lug"
+        ],
+        [
+          "rear_termination_open",
+          "nozzle_holes_rear"
+        ],
+        "segmented_body_pattern"
+      ],
+      "supporting_attributes": [
+        "tail_fins",
+        "separated_components_joined",
+        "distal_diameter_step_down",
+        "perforated_tubular_stalk",
+        "tubular_end_section"
+      ]
+    },
+    "Grenade": {
+      "type": "Hand_Thrown_Munition",
+      "description": "Hand-held throwable objects",
+      "required_attributes": [
+        [
+          "pull_ring",
+          "top_mounted_mechanism",
+          "firing_mechanism_parts",
+          "lever_released"
+        ],
+        [
+          "segmented_body_pattern",
+          "rounded_shape_oval"
+        ]
+      ],
+      "forbidden_attributes": [
+        [
+          "elongated_cylindrical",
+          "uniform_diameter_profile",
+          "tubular_end_section",
+          "cylindrical_simple",
+          "cylindrical_parallel_midsection",
+          "slender_tubular_body"
+        ],
+        [
+          "distal_diameter_step_down",
+          "tail_fins"
+        ],
+        [
+          "flat_disc_circular",
+          "copper_band_at_base"
+        ]
+      ],
+      "supporting_attributes": [
+        "pull_ring",
+        "top_mounted_mechanism",
+        "firing_mechanism_parts",
+        "segmented_body_pattern",
+        "fits_in_hand"
+      ]
+    },
+    "Rocket": {
+      "type": "Rocket_Propelled_Munition",
+      "description": "Unguided fin-stabilized rockets",
+      "required_attributes": [
+        [
+          "tail_fins",
+          "separated_components_joined"
+        ],
+        [
+          "slender_tubular_body",
+          "uniform_diameter_profile",
+          "elongated_cylindrical"
+        ]
+      ],
+      "forbidden_attributes": [
+        [
+          "teardrop_shaped_front",
+          "rounded_shape_oval"
+        ],
+        [
+          "segmented_body_pattern",
+          "pull_ring"
+        ],
+        [
+          "distal_diameter_step_down",
+          "perforated_tubular_stalk"
+        ]
+      ],
+      "supporting_attributes": [
+        "rear_termination_open",
+        "nozzle_holes_rear",
+        "tubular_end_section"
+      ]
+    },
+    "RPG": {
+      "type": "Shoulder_Launched",
+      "description": "Elongated tubular objects with pointed frontal cavity",
+      "required_attributes": [
+        [
+          "ogive_conic_short",
+          "ogive_blunt",
+          "conical_pointed"
+        ],
+        [
+          "rear_termination_open",
+          "nozzle_holes_rear"
+        ],
+        [
+          "distal_diameter_step_down",
+          "tubular_end_section"
+        ]
+      ],
+      "forbidden_attributes": [
+        [
+          "segmented_body_pattern",
+          "pull_ring",
+          "rounded_shape_oval",
+          "flat_disc_circular",
+          "pressure_plate"
+        ],
+        [
+          "rim_flange_base",
+          "base_center_dented",
+          "tail_fins"
+        ],
+        "uniform_diameter_profile"
+      ],
+      "supporting_attributes": [
+        "rear_termination_open",
+        "nozzle_holes_rear",
+        "tubular_end_section"
+      ]
+    },
+    "Aviation_Bomb": {
+      "type": "Air_Dropped_Object",
+      "description": "Large suspension-mounted objects",
+      "required_attributes": [
+        [
+          "large_diameter",
+          "requires_equipment"
+        ],
+        [
+          "elongated_cylindrical",
+          "rounded_shape_oval"
+        ]
+      ],
+      "forbidden_attributes": [
+        [
+          "segmented_body_pattern",
+          "pull_ring",
+          "pressure_plate",
+          "fits_in_hand"
+        ],
+        [
+          "tail_fins",
+          "distal_diameter_step_down",
+          "tubular_end_section",
+          "separated_components_joined",
+          "rear_termination_open",
+          "nozzle_holes_rear"
+        ],
+        "copper_band_at_base"
+      ],
+      "supporting_attributes": [
+        "suspension_lug"
+      ]
+    },
+    "Mine": {
+      "type": "Stationary_Object",
+      "description": "Ground or seabed deployed objects",
+      "required_attributes": [
+        [
+          "flat_disc_circular",
+          "hemispherical_half",
+          "rectangular_box",
+          "rounded_shape_oval",
+          "concentric_rings_pattern"
+        ],
+        [
+          "pressure_plate",
+          "top_mounted_mechanism",
+          "base_center_dented"
+        ]
+      ],
+      "forbidden_attributes": [
+        [
+          "teardrop_shaped_front",
+          "elongated_cylindrical",
+          "tubular_end_section"
+        ],
+        [
+          "segmented_body_pattern",
+          "tail_fins",
+          "copper_band_at_base",
+          "pull_ring",
+          "fits_in_hand"
+        ]
+      ],
+      "supporting_attributes": [
+        "pressure_plate",
+        "top_mounted_mechanism",
+        "concentric_rings_pattern"
+      ]
+    },
+    "Cartridge": {
+      "type": "Small_Object",
+      "description": "Compact metallic cylindrical objects",
+      "required_attributes": [
+        [
+          "cylindrical_simple",
+          "uniform_diameter_profile",
+          "elongated_cylindrical",
+          "tubular_end_section",
+          "distal_diameter_step_down"
+        ],
+        [
+          "base_center_dented",
+          "rim_flange_base"
+        ],
+        "fits_in_hand"
+      ],
+      "forbidden_attributes": [
+        [
+          "pull_ring",
+          "segmented_body_pattern",
+          "flat_disc_circular",
+          "concentric_rings_pattern",
+          "pressure_plate",
+          "top_mounted_mechanism"
+        ],
+        "tail_fins"
+      ],
+      "supporting_attributes": [
+        "base_center_dented",
+        "rim_flange_base"
+      ]
+    },
+    "AntiSubmarine_Bomb": {
+      "type": "Underwater_Object",
+      "description": "Large underwater cylindrical objects",
+      "required_attributes": [
+        [
+          "elongated_cylindrical",
+          "uniform_diameter_profile",
+          "teardrop_shaped_front"
+        ],
+        [
+          "rear_termination_flat",
+          "tubular_end_section",
+          "distal_diameter_step_down"
+        ],
+        [
+          "large_diameter",
+          "requires_equipment"
+        ]
+      ],
+      "forbidden_attributes": [
+        [
+          "segmented_body_pattern",
+          "pull_ring",
+          "fits_in_hand"
+        ],
+        [
+          "tail_fins",
+          "copper_band_at_base"
+        ]
+      ],
+      "supporting_attributes": [
+        "rear_termination_flat",
+        "tubular_end_section",
+        "large_diameter"
+      ]
+    }
+  },
+  "all_attributes": [
+    "base_center_dented",
+    "conical_pointed",
+    "copper_band_at_base",
+    "cylindrical_parallel_midsection",
+    "cylindrical_simple",
+    "distal_diameter_step_down",
+    "elongated_cylindrical",
+    "fits_in_hand",
+    "flat_disc_circular",
+    "rounded_shape_oval",
+    "tail_fins",
+    "hemispherical_half",
+    "large_diameter",
+    "nozzle_holes_rear",
+    "ogive_blunt",
+    "ogive_conic_elongated",
+    "ogive_conic_short",
+    "teardrop_shaped_front",
+    "perforated_tubular_stalk",
+    "pressure_plate",
+    "pull_ring",
+    "rear_termination_flat",
+    "rear_termination_open",
+    "rectangular_box",
+    "requires_equipment",
+    "rim_flange_base",
+    "separated_components_joined",
+    "slender_tubular_body",
+    "suspension_lug",
+    "top_mounted_mechanism",
+    "tubular_end_section",
+    "uniform_diameter_profile",
+    "segmented_body_pattern",
+    "grooves_on_body",
+    "spiral_grooves_on_band",
+    "lever_released",
+    "firing_mechanism_parts",
+    "concentric_rings_pattern"
+  ]
+}
